@@ -1,0 +1,13 @@
+
+  .trending-content{
+    margin-left: 270px;
+  }
+  
+  @media (max-width: 480px) {
+
+    .trending-content{
+      margin-left: 0;
+    }
+    
+    
+  }

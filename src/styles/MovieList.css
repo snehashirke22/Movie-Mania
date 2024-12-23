@@ -1,0 +1,15 @@
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1500px;
+}
+
+
+@media (max-width: 480px) {
+  .movie-list{
+   justify-content: center;
+   margin-top: 5%;
+  }
+}

@@ -1,0 +1,145 @@
+.sidebar {
+    position: absolute;
+    width: 250px; 
+    min-width: 250px;
+    height: 100vh; 
+    background-color: #f0f0f0; 
+    padding-top: 10px; 
+    position: fixed;
+    top: 80px; 
+    display: flex;
+    box-sizing: border-box;
+    overflow-y:auto;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    
+}
+.sidebar.closed {
+    transform: translateX(-100%); 
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-item {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.menu-item-link {
+    padding: 15px 20px;
+width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #171717; 
+    transition: background-color 0.3s;
+}
+
+.menu-item-link:hover {
+    background-color: #f19914;
+    color: white; 
+}
+
+.menu-item-link.active {
+    background-color: #f19914; 
+    color: white; 
+}
+
+  
+.menu-icon {
+    margin-right: 10px;
+    color: #0c0c0c;
+}
+
+.menu-item a {
+    text-decoration: none; 
+  }
+.menu-text {
+    font-size: 1.1rem;
+    color: #171717;
+    font-weight: 500;
+}
+
+.category{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.categories {
+    list-style: none;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.category-item:hover {
+    background-color: #f19914; 
+}
+
+.category-icon {
+    margin-right: 10px;
+    color: #000000;
+}
+
+.category-text {
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 300;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); 
+        z-index: 5;
+    }
+
+    .sidebar.open {
+        transform: translateX(0); 
+    }
+    .menu{
+        margin-top: 50px;
+    }
+    .menu-item{
+        width: 100%;
+    }
+    .menu-icon {
+        display: block; 
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .sidebar{
+        z-index: 100;
+        width: 200px;
+        min-width: 200px;
+    }
+    .menu-text{
+        font-size: 1rem;
+    }
+    .category-text{
+        font-size: 0.9rem;
+    }
+}

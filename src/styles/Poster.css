@@ -1,0 +1,14 @@
+
+.trending-poster {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+  }
+  

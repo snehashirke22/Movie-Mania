@@ -1,0 +1,14 @@
+
+.movie-list-content{
+    margin-left: 270px;
+    padding-top: 630px; 
+    display: flex;
+  }
+
+
+@media (max-width: 480px) {
+  .movie-list-content{
+    margin-left: 0;
+  }
+
+}
