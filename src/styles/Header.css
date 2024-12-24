@@ -16,7 +16,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
-    color: white;
     padding: 0 20px;
     top: 0; 
     height: 80px;
@@ -24,9 +23,7 @@ body {
     z-index: 1000;
     max-width: 1770px;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    box-sizing: border-box;
-  
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
 }
 
 .logo {
@@ -38,17 +35,12 @@ body {
 .site-name {
     font-size: 1.3rem;
     color: rgb(42, 43, 44);
-    font-weight: bold;
-    margin: 0;
     line-height: 1.2;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-style: normal;
 }
 
 .logo-img {
     height: 60px;
-    width: auto;
     margin-bottom: 10px;
 }
 
@@ -74,14 +66,12 @@ body {
   }
 .search-bar {
     padding: 12px 30px 8px 12px;
-    font-size: 1rem;
+    font-size: 16px;
     border-radius: 4px;
     border: none;
     margin-right: 15px;
     width: 600px;
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
     border: solid #f19914 2px;
   }
 
@@ -96,7 +86,7 @@ body {
   }
   .search-bar:focus {
     outline: none;
-    border: 1px solid #696969; 
+    border: 3px solid #f19914; 
   }
 
   @media (max-width: 768px) {
@@ -112,27 +102,29 @@ body {
         font-size: 26px;
         margin-bottom: 7px;  
     }
-    .search-bar {
-        width: 400px;  
-        font-size: 14px;
+    .search-container{
         margin: 0 auto;
+        padding-bottom: 40px;
+    }
+    .search-bar {
+        width: 450px;  
+        font-size: 14px;
     }
     .menu-bar-icon {
         top: 20px; 
         left: 15px; 
-        font-size: 25px;
+        font-size: 28px;
         display: block; 
-        color: #eaeaea;
-        z-index: 1000;
+    
         
     }
     .search-icon {
-        right: 35px;  
+        left: 90%;
+        top: 25%;  
         
     }
     .header-actions {
         flex-direction: row;  
-        align-items: center;
         width: 100%;
     }
 }
@@ -145,22 +137,23 @@ body {
         height: 50px;  
     }
     .site-name {
-        font-size: 26px;
+        font-size: 24px;
     }
     .search-container{
         margin: 0 auto;
+        padding-bottom: 8px;
     }
     .search-bar {
         width: 300px; 
-        font-size: 12px;
+        font-size: 14px;
     }
     .menu-bar-icon {
         top: 20px; 
         left: 15px; 
-        color: black;
     }
     .search-icon {
-        left: 90%;  
+        left: 85%;  
+        top: 40%;
     }
     .header-actions {
         flex-direction: row;  

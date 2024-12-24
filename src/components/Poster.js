@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles/Poster.css';
 
-const Poster = ({image}) => {
+const Poster = ({ image }) => {
   return (
     <>
-    <div className="trending-poster">
+      <div className="trending-poster">
         <img
-          src={image}  // Replace this URL with your actual poster image URL
+          src={image}  
           alt="Trending Poster"
           className="poster-image"
         />

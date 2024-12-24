@@ -1,0 +1,13 @@
+
+.genre-movies-list{
+    margin-left: 270px;
+    padding-top: 95px;
+  }
+
+
+@media (max-width: 480px) {
+  .genre-movies-list{
+    margin-left: 0;
+  }
+
+}

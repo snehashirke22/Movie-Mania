@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/Home.css';
+import { useParams } from 'react-router-dom';
+import '../styles/Genre.css'; 
 import MovieList from '../components/MovieList';
-import Carousel from '../components/Carousel';
-const Home = () => {
+
+const Genre = () => {
+    const { genreId } = useParams();
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -10,24 +12,24 @@ const Home = () => {
             method: 'GET',
             headers: {
                 accept: 'application/json',
-                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
             },
         };
-
-        fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
+         
+        fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}`, options)
             .then(res => res.json())
             .then(data => setMovies(data.results))
             .catch(err => console.error(err));
-    }, [])
-    console.log(movies);
+
+    }, [genreId]);
+
     return (
         <div>
-            <Carousel />
-            <div className="movie-list-content">
+            <div className="genre-movies-list">
                 <MovieList movies={movies} />
             </div>
         </div>
     );
 };
 
-export default Home;
+export default Genre;

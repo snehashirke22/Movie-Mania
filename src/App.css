@@ -1,41 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light grey background */
+  background-color: #f4f4f4; 
   display: flex;
-  justify-content: center; /* Center the container horizontally */
-  align-items: flex-start; /* Align content at the top */
+  justify-content: center; 
   min-height: 100vh;
 }
 
 .app {
-  width: 100%; /* Fixed width for the entire layout */
-  max-width: 100%; /* Ensure it doesn't overflow smaller screens */
-  background-color: #fff; /* White background for the content area */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
-  display: flex;
-  flex-direction: column;
+  width: 100%; 
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   position: relative;
-}
-
-.content {
-  padding-top: 630px; 
 }
 
 
 @media (max-width: 1400px) {
   .app{
-    width: 100%; /* Fixed width for the entire layout */
-    max-width: 100%;
-  }
-
-}
-
-@media (max-width: 480px) {
-  .app{
     width: 100%; 
-    max-width: 100%;
   }
-
-  
 }

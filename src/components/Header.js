@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import '../styles/Header.css';
 import logo from '../assets/logo.png';
 import { BsSearch } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi"; 
+import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
 const Header = ({ toggleSidebar, isSidebarOpen }) => {
     const [query, setQuery] = useState('');
 
-    const handleInputChange = (e) =>{
+    const handleInputChange = (e) => {
         setQuery(e.target.value);
     };
 
-    const handleKeyPress = (e) =>{
-        if(e.key === 'Enter'){
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
             alert(`You searched for: ${query}`);
         }
     };
@@ -27,33 +27,33 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
             </div>
             <div className="header-actions">
                 {isSidebarOpen ? (
-                    <AiOutlineClose 
-                        className="menu-bar-icon" 
-                        color="black" 
-                        onClick={toggleSidebar} 
-                        aria-label="Close Sidebar" 
+                    <AiOutlineClose
+                        className="menu-bar-icon"
+                        color="black"
+                        onClick={toggleSidebar}
+                        aria-label="Close Sidebar"
                     />
                 ) : (
-                    <GiHamburgerMenu 
-                        className="menu-bar-icon" 
-                        color="black" 
-                        onClick={toggleSidebar} 
-                        aria-label="Open Sidebar" 
+                    <GiHamburgerMenu
+                        className="menu-bar-icon"
+                        color="black"
+                        onClick={toggleSidebar}
+                        aria-label="Open Sidebar"
                     />
-                )}                
+                )}
                 <div className="search-container">
-                    <input 
-                        type="text" 
-                        className="search-bar" 
-                        placeholder="Search movies..." 
+                    <input
+                        type="text"
+                        className="search-bar"
+                        placeholder="Search movies..."
                         aria-label="Search Movies"
                         value={query}
                         onChange={handleInputChange}
-                        onKeyPress={handleKeyPress}
+                        onKeyUp={handleKeyPress}
                     />
                     <BsSearch className="search-icon" />
-            </div>
                 </div>
+            </div>
         </header>
     );
 };
