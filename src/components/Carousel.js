@@ -57,6 +57,7 @@ const MovieCarousel = () => {
             src={movies[currentIndex].image}
             alt={movies[currentIndex].title}
             className="carousel-image"
+            loading="lazy"
           />
 
           <div className="carousel-content">

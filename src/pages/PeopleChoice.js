@@ -42,14 +42,12 @@ const PeopleChoice = ({query}) => {
                 <SearchResults query={query} />
 
                 {/* Always show the normal API response, even if search results exist */}
-                <div>
                         <div>
                             <hr/>
                             <br/>
                             <h2 style={{ marginLeft: '2%'}}>People's Choice</h2>
                             <MovieList movies={movies} />
                         </div>
-                </div>
             </div>
         </div>
     );

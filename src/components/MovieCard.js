@@ -6,7 +6,7 @@ const MovieCard = ({ title, date, image, rating }) => {
     <div className="movie-card">
 
       <div className="movie-image-container">
-        <img src={image} alt={title} className="movie-image" />
+        <img src={image} alt={title} className="movie-image" loading="lazy"/>
 
         <div className="rating">
           <span>{rating}</span>

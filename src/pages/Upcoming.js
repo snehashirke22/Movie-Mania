@@ -41,14 +41,12 @@ const Upcoming = ({query}) => {
                 <SearchResults query={query} />
 
                 {/* Always show the normal API response, even if search results exist */}
-                <div>
                         <div>
                             <hr/>
                             <br/>
                             <h2 style={{ marginLeft: '2%'}}>Upcoming Movies</h2>
                             <MovieList movies={movies} />
                         </div>
-                </div>
             </div>
         </div>
     );
