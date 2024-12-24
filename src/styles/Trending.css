@@ -1,8 +1,18 @@
 
+.main-heading{
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+
   .trending-content{
     margin-left: 270px;
   }
   
+  /* Dark Mode Style */
+  body.dark-mode .main-heading{
+    color: #f1f1f1;
+  
+  }
   @media (max-width: 480px) {
 
     .trending-content{

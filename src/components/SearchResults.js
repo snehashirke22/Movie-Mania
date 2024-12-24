@@ -35,7 +35,7 @@ const SearchResults = ({ query }) => {
             {query && searchMovies.length > 0 && (
                 <div>
                     <br />
-                    <h2 style={{ marginLeft: '2%' }}>Movies Matching Your Search</h2>
+                    <h2 className='main-heading'>Movies Matching Your Search</h2>
                     <MovieList movies={searchMovies} />
                     <br />
                 </div>
@@ -45,7 +45,7 @@ const SearchResults = ({ query }) => {
             {query && searchMovies.length === 0 && (
                 <div>
                     <br/>
-                    <p style={{ marginLeft: '2%' }}>(No Movies Found for "{query}". Try searching with a different name.)</p>
+                    <p className='main-heading'>(No Movies Found for "{query}". Try searching with a different name.)</p>
                     <br />
 
                 </div>

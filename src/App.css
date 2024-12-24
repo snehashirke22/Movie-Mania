@@ -14,6 +14,14 @@ body {
   position: relative;
 }
 
+/* Dark Mode Style */
+body.dark-mode{
+  background-color: #333333;;
+}
+
+body.dark-mode .app{
+background-color: #535353;
+}
 
 @media (max-width: 1400px) {
   .app{

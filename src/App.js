@@ -8,6 +8,7 @@ import Trending from './pages/Trending';
 import Upcoming from './pages/Upcoming';
 import PeopleChoice from './pages/PeopleChoice';
 import Genre from './pages/Genre';
+import DarkModeProvider from './context/DarkModeContext';
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -18,13 +19,15 @@ const App = () => {
     };
 
     return (
+        <DarkModeProvider>
+
         <BrowserRouter>
             <div className="app">
                 <Header 
                     toggleSidebar={toggleSidebar} 
                     isSidebarOpen={isSidebarOpen} 
                     setQuery={setQuery} // Pass setQuery to Header
-                />
+                    />
                 <Sidebar isOpen={isSidebarOpen} />
                 <Routes>
                     <Route path="/" exact element={<Home query={query} />} />
@@ -35,6 +38,7 @@ const App = () => {
                 </Routes>
             </div>
         </BrowserRouter>
+                    </DarkModeProvider>
     );
 };
 

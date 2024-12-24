@@ -8,6 +8,7 @@ import { BiSolidMoviePlay } from "react-icons/bi";
 
 
 const Sidebar = ({ isOpen }) => {
+  
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <ul className="menu">

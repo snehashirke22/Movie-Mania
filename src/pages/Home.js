@@ -35,13 +35,17 @@ const Home = ({ query }) => {
             <Carousel />
             <div className="movie-list-content">
                 {/* If search results exist, show them */}
-                <SearchResults query={query} />
+                {query && (
+                    <>
+                        <SearchResults query={query} />
+                        <hr />
+                    </>
+                )}
 
                 {/* Always show the normal API response, even if search results exist */}
                         <div>
-                            <hr/>
                             <br/>
-                            <h2 style={{ marginLeft: '2%'}}>Popular Movies</h2>
+                            <h2 className='popularmovies-heading'>Popular Movies</h2>
                             <MovieList movies={movies} />
                         </div>
             </div>

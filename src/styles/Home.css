@@ -1,4 +1,8 @@
 
+.popularmovies-heading{
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
 .movie-list-content{
     margin-left: 270px;
     padding-top: 630px; 
@@ -6,7 +10,11 @@
     flex-direction: column;
   }
 
-
+  /* Dark Mode Style */
+  body.dark-mode .popularmovies-heading{
+    color: #f1f1f1;
+  
+  }
 @media (max-width: 480px) {
   .movie-list-content{
     margin-left: 0;

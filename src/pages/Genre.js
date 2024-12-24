@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/Genre.css'; 
+import '../styles/Genre.css';
 import MovieList from '../components/MovieList';
 import SearchResults from '../components/SearchResults';
 
@@ -37,14 +37,19 @@ fetchMovies();
 
             <div className="genre-movies-list">
                 {/* If search results exist, show them */}
-                <SearchResults query={query} />
+                {query && (
+                    <>
+                        <SearchResults query={query} />
+                        <hr />
+                    </>
+                )}
+
 
                 {/* Always show the normal API response, even if search results exist */}
                 <div>
                         <div>
-                            <hr/>
                             <br/>
-                            <h2 style={{ marginLeft: '2%'}}>{genreName} Movies</h2>
+                            <h2 className='genre-name'>{genreName} Movies</h2>
                             <MovieList movies={movies} />
                         </div>
                 </div>

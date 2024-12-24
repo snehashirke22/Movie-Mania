@@ -1,9 +1,18 @@
 
+.genre-name{
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
 .genre-movies-list{
     margin-left: 270px;
     padding-top: 95px;
   }
 
+  /* Dark Mode Style */
+body.dark-mode .genre-name{
+  color: #f1f1f1;
+
+}
 
 @media (max-width: 480px) {
   .genre-movies-list{

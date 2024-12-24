@@ -1,36 +1,38 @@
 import React from 'react';
 import '../styles/Header.css';
-import logo from '../assets/logo.png';
+import movie from '../assets/movie.png';
 import { BsSearch } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 import PropTypes from 'prop-types';
+import { useDarkMode } from '../context/DarkModeContext';
 
-const Header = ({ toggleSidebar, isSidebarOpen, setQuery }) => {
+const Header = ({ toggleSidebar, isSidebarOpen, setQuery}) => {
+    
+    const {isDarkMode, toggleDarkMode} = useDarkMode();
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
     };
 
-
     return (
         <header className="header">
             <div className="logo">
-                {logo && <img src={logo} alt="MovieSmash Logo" className="logo-img" />}
+                {movie && <img src={movie} alt="MovieSmash Logo" className="logo-img" />}
                 <p className="site-name">MovieMania</p>
             </div>
             <div className="header-actions">
                 {isSidebarOpen ? (
                     <AiOutlineClose
                         className="menu-bar-icon"
-                        color="black"
                         onClick={toggleSidebar}
                         aria-label="Close Sidebar"
                     />
                 ) : (
                     <GiHamburgerMenu
                         className="menu-bar-icon"
-                        color="black"
                         onClick={toggleSidebar}
                         aria-label="Open Sidebar"
                     />
@@ -45,6 +47,21 @@ const Header = ({ toggleSidebar, isSidebarOpen, setQuery }) => {
                     />
                     <BsSearch className="search-icon" />
                 </div>
+
+
+                    <div onClick={toggleDarkMode}>
+                        {isDarkMode ? 
+                        <MdLightMode
+                            size={30}
+                            color="white"
+                            aria-label="Switch to Light Mode"
+                            style={{ cursor: 'pointer' }} /> 
+                            : 
+                            <MdDarkMode
+                            size={30}
+                            aria-label="Switch to Dark Mode"
+                            style={{ cursor: 'pointer' }} />}
+                    </div>
             </div>
         </header>
     );

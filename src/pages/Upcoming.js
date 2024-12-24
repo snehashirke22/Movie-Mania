@@ -38,13 +38,17 @@ const Upcoming = ({query}) => {
             <Poster image={poster2} />
              <div className="trending-content">
                 {/* If search results exist, show them */}
-                <SearchResults query={query} />
+                {query && (
+                    <>
+                        <SearchResults query={query} />
+                        <hr />
+                    </>
+                )}
 
                 {/* Always show the normal API response, even if search results exist */}
                         <div>
-                            <hr/>
                             <br/>
-                            <h2 style={{ marginLeft: '2%'}}>Upcoming Movies</h2>
+                            <h2 className='main-heading'>Upcoming Movies</h2>
                             <MovieList movies={movies} />
                         </div>
             </div>

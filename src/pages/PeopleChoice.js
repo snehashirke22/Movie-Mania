@@ -39,13 +39,17 @@ const PeopleChoice = ({query}) => {
             <Poster image={poster3} />
             <div className="trending-content">
                 {/* If search results exist, show them */}
-                <SearchResults query={query} />
+                {query && (
+                    <>
+                        <SearchResults query={query} />
+                        <hr />
+                    </>
+                )}
 
                 {/* Always show the normal API response, even if search results exist */}
-                        <div>
-                            <hr/>
+                        <div>             
                             <br/>
-                            <h2 style={{ marginLeft: '2%'}}>People's Choice</h2>
+                            <h2 className='main-heading'>People's Choice</h2>
                             <MovieList movies={movies} />
                         </div>
             </div>

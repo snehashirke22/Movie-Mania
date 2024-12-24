@@ -56,6 +56,15 @@
 }
 
 
+/* Dark Mode Style */
+body.dark-mode .movie-card{
+  background-color: #2a2a2a;
+}
+body.dark-mode .movie-title,
+body.dark-mode .movie-date{
+  color: #f1f1f1;
+}
+
 @media (max-width: 480px) {
   .movie-card {
     width: 180px;
