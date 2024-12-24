@@ -2,31 +2,50 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/Genre.css'; 
 import MovieList from '../components/MovieList';
+import SearchResults from '../components/SearchResults';
 
-const Genre = () => {
-    const { genreId } = useParams();
+const Genre = ({query}) => {
+    const { genreId, genreName } = useParams();
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-            },
-        };
+        const fetchMovies = async () => {
+            try {
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        accept: 'application/json',
+                        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+                    },
+                };
          
-        fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}`, options)
-            .then(res => res.json())
-            .then(data => setMovies(data.results))
-            .catch(err => console.error(err));
+        const url = `https://api.themoviedb.org/3/discover/movie?with_genres=${genreId}`;
+        const response = await fetch(url, options);
+        const data = await response.json();
+        setMovies(data.results);
+    } catch (err) {
+        console.error('Error fetching movies:', err);
+    } 
+};
 
-    }, [genreId]);
+fetchMovies();
+}, [genreId]); 
+
 
     return (
         <div>
+
             <div className="genre-movies-list">
-                <MovieList movies={movies} />
+                {/* If search results exist, show them */}
+                <SearchResults query={query} />
+
+                {/* Always show the normal API response, even if search results exist */}
+                <div>
+                        <div>
+                            <h2 style={{ marginLeft: '2%'}}>{genreName} Movies</h2>
+                            <MovieList movies={movies} />
+                        </div>
+                </div>
             </div>
         </div>
     );

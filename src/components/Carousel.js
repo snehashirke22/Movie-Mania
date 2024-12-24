@@ -10,19 +10,19 @@ const MovieCarousel = () => {
       title: "Deadpool and wolverine",
       description: "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse.",
       image: Deadpool,
-      link: "/movie1"
+      link: "/"
     },
     {
       title: "Intersteller",
       description: "Astronauts travel through a wormhole to find a new planet as Earth faces extinction, exploring love, time, and survival.",
       image: Intersteller,
-      link: "/movie2"
+      link: "/"
     },
     {
       title: "Venom : The Last Dance",
       description: "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters.",
       image: Venom,
-      link: "/movie3"
+      link: "/"
     },
   ];
 

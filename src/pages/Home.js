@@ -1,30 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Home.css';
-import MovieList from '../components/MovieList';
 import Carousel from '../components/Carousel';
-const Home = () => {
+import SearchResults from '../components/SearchResults';
+import MovieList from '../components/MovieList';
+
+const Home = ({ query }) => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
-            },
+        const fetchMovies = async () => {
+            try {
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        accept: 'application/json',
+                        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+                    },
+                };
+
+                const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US`;
+                const response = await fetch(url, options);
+                const data = await response.json();
+                setMovies(data.results);
+            } catch (err) {
+                console.error('Error fetching movies:', err);
+            } 
         };
 
-        fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
-            .then(res => res.json())
-            .then(data => setMovies(data.results))
-            .catch(err => console.error(err));
-    }, [])
-    console.log(movies);
+        fetchMovies();
+    }, []); 
+
     return (
         <div>
             <Carousel />
             <div className="movie-list-content">
-                <MovieList movies={movies} />
+                {/* If search results exist, show them */}
+                <SearchResults query={query} />
+
+                {/* Always show the normal API response, even if search results exist */}
+                <div>
+                        <div>
+                            <hr/>
+                            <br/>
+                            <h2 style={{ marginLeft: '2%'}}>Popular Movies</h2>
+                            <MovieList movies={movies} />
+                        </div>
+                </div>
             </div>
         </div>
     );

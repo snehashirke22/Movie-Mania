@@ -11,6 +11,7 @@ import Genre from './pages/Genre';
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [query, setQuery] = useState(''); // Search query state
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -19,15 +20,19 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className="app">
-                <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+                <Header 
+                    toggleSidebar={toggleSidebar} 
+                    isSidebarOpen={isSidebarOpen} 
+                    setQuery={setQuery} // Pass setQuery to Header
+                />
                 <Sidebar isOpen={isSidebarOpen} />
-                    <Routes>
-                        <Route path="/" exact element={<Home />} />
-                        <Route path="/trending" exact element={<Trending />} />
-                        <Route path="/upcoming" exact element={<Upcoming />} />
-                        <Route path="/peoplechoice" exact element={<PeopleChoice />} />
-                        <Route path="/genre/:genreId" exact element={<Genre />} />
-                    </Routes>
+                <Routes>
+                    <Route path="/" exact element={<Home query={query} />} />
+                    <Route path="/trending" exact element={<Trending query={query} />} />
+                    <Route path="/upcoming" exact element={<Upcoming query={query} />} />
+                    <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
+                    <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
+                </Routes>
             </div>
         </BrowserRouter>
     );

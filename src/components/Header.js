@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Header.css';
 import logo from '../assets/logo.png';
 import { BsSearch } from "react-icons/bs";
@@ -6,18 +6,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
-const Header = ({ toggleSidebar, isSidebarOpen }) => {
-    const [query, setQuery] = useState('');
+const Header = ({ toggleSidebar, isSidebarOpen, setQuery }) => {
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
     };
 
-    const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            alert(`You searched for: ${query}`);
-        }
-    };
 
     return (
         <header className="header">
@@ -47,9 +41,7 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
                         className="search-bar"
                         placeholder="Search movies..."
                         aria-label="Search Movies"
-                        value={query}
                         onChange={handleInputChange}
-                        onKeyUp={handleKeyPress}
                     />
                     <BsSearch className="search-icon" />
                 </div>

@@ -44,55 +44,55 @@ const Sidebar = ({ isOpen }) => {
         <hr />
         <p className="category">Genres</p>
         <li className="category-item">
-          <NavLink to="/genre/28" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Action/28" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Action</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/35" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Comedy/35" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Comedy</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/80" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Crime/80" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Crime</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/14" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Fantasy/14" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Fantasy</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/27" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Horror/27" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Horror</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/9648" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Mystry/9648" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Mystery</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/878" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Science-Fiction/878" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Science Fiction</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/53" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/Thriller/53" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">Thriller</span>
           </NavLink>
         </li>
         <li className="category-item">
-          <NavLink to="/genre/36" activeClassName="active" className="category-item-link">
+          <NavLink to="/genre/History/36" activeClassName="active" className="category-item-link">
             <BiSolidMoviePlay size={25} className="category-icon" />
             <span className="category-text">History</span>
           </NavLink>
