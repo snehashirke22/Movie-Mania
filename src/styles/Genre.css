@@ -18,5 +18,9 @@ body.dark-mode .genre-name{
   .genre-movies-list{
     margin-left: 0;
   }
+  .genre-name{
+    margin-top: 5%;
+text-align: center; 
+}
 
 }

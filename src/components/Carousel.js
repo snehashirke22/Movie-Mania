@@ -10,19 +10,19 @@ const MovieCarousel = () => {
       title: "Deadpool and wolverine",
       description: "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse.",
       image: Deadpool,
-      link: "/"
+      link: "https://youtu.be/73_1biulkYk?si=op3nM2ZNuAFbxpQC"
     },
     {
       title: "Intersteller",
       description: "Astronauts travel through a wormhole to find a new planet as Earth faces extinction, exploring love, time, and survival.",
       image: Intersteller,
-      link: "/"
+      link: "https://youtu.be/zSWdZVtXT7E?si=mrnnNqhufTmt47cV"
     },
     {
       title: "Venom : The Last Dance",
       description: "Eddie Brock and Venom must make a devastating decision as they're pursued by a mysterious military man and alien monsters.",
       image: Venom,
-      link: "/"
+      link: "https://youtu.be/HyIyd9joTTc?si=3cSLpg2c6IX06iWL"
     },
   ];
 
@@ -63,7 +63,7 @@ const MovieCarousel = () => {
           <div className="carousel-content">
             <h2>{movies[currentIndex].title}</h2>
             <p>{movies[currentIndex].description}</p>
-            <a href={movies[currentIndex].link} className="btn">Watch Trailer</a>
+            <a href={movies[currentIndex].link} target="_blank" rel="noopener noreferrer" className="btn">Watch Trailer</a>
           </div>
         </div>
 
