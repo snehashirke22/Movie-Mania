@@ -2,6 +2,10 @@ import React from 'react';
 import '../styles/MovieCard.css';
 
 const MovieCard = ({ title, date, image, rating }) => {
+
+  //If rating not available or 0 or null or undefined then show NA instead
+  const displayRating = (parseFloat(rating) === 0 || !rating) ? 'NA' : rating; 
+
   return (
     <div className="movie-card">
 
@@ -9,7 +13,7 @@ const MovieCard = ({ title, date, image, rating }) => {
         <img src={image} alt={title} className="movie-image" loading="lazy"/>
 
         <div className="rating">
-          <span>{rating}</span>
+          <span>{displayRating}</span>
         </div>
       </div>
 
