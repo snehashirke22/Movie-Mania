@@ -39,7 +39,7 @@
   color: #f1f1f1 ;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
 }
 
@@ -69,6 +69,12 @@
   background-color: #f19914e0;
 }
 
+.trailer-icon{
+  margin-left: 8px;
+  font-size: 28px;
+  transform: translateY(25%);
+
+}
 button {
   position: absolute;
   top: 50%;

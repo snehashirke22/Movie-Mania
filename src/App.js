@@ -9,6 +9,7 @@ import Upcoming from './pages/Upcoming';
 import PeopleChoice from './pages/PeopleChoice';
 import Genre from './pages/Genre';
 import DarkModeProvider from './context/DarkModeContext';
+import Footer from './components/Footer';
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
                     <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
                     <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
                 </Routes>
+                <Footer />
             </div>
         </BrowserRouter>
                     </DarkModeProvider>

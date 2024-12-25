@@ -3,6 +3,8 @@ import '../styles/Carousel.css';
 import Deadpool from '../assets/Deadpool.jpg';
 import Intersteller from '../assets/intersteller.jpg';
 import Venom from '../assets/venom.jpg';
+import { FaYoutube } from "react-icons/fa";
+
 
 const MovieCarousel = () => {
   const movies = [
@@ -63,7 +65,9 @@ const MovieCarousel = () => {
           <div className="carousel-content">
             <h2>{movies[currentIndex].title}</h2>
             <p>{movies[currentIndex].description}</p>
-            <a href={movies[currentIndex].link} target="_blank" rel="noopener noreferrer" className="btn">Watch Trailer</a>
+            <a href={movies[currentIndex].link} target="_blank" rel="noopener noreferrer" className="btn">
+              Watch Trailer<span><FaYoutube className="trailer-icon"/></span>
+            </a>
           </div>
         </div>
 
