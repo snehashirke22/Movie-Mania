@@ -18,7 +18,7 @@ const Home = ({ query }) => {
                     },
                 };
 
-                const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US`;
+                const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`;
                 const response = await fetch(url, options);
                 const data = await response.json();
                 setMovies(data.results);
@@ -45,7 +45,6 @@ const Home = ({ query }) => {
                 {/* Always show the normal API response, even if search results exist */}
                         <div>
                             <br/>
-                            <h2 className='popularmovies-heading'>Popular Movies</h2>
                             <MovieList movies={movies} />
                         </div>
             </div>

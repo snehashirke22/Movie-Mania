@@ -20,7 +20,7 @@ const Trending = ({query}) => {
                         },
                     };
     
-                    const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`;
+                    const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US&sort_by=popularity.desc`;
                     const response = await fetch(url, options);
                     const data = await response.json();
                     setMovies(data.results);

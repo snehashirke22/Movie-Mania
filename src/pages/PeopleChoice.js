@@ -21,7 +21,7 @@ const PeopleChoice = ({query}) => {
                             },
                         };
         
-                        const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`;
+                        const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`;
                         const response = await fetch(url, options);
                         const data = await response.json();
                         setMovies(data.results);
@@ -49,7 +49,7 @@ const PeopleChoice = ({query}) => {
                 {/* Always show the normal API response, even if search results exist */}
                         <div>             
                             <br/>
-                            <h2 className='main-heading'>People's Choice</h2>
+                            <h2 className='main-heading'>All Time Popular Movies</h2>
                             <MovieList movies={movies} />
                         </div>
             </div>

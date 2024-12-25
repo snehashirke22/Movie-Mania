@@ -12,6 +12,8 @@ const Upcoming = ({query}) => {
           useEffect(() => {
               const fetchMovies = async () => {
                   try {
+                    const today = new Date().toISOString().split('T')[0] // For getting today's date in YYYY-MM-DD format
+                    
                       const options = {
                           method: 'GET',
                           headers: {
@@ -20,10 +22,11 @@ const Upcoming = ({query}) => {
                           },
                       };
       
-                      const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`;
+                      const url = `https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&primary_release_date.gte=${today}`;
                       const response = await fetch(url, options);
                       const data = await response.json();
                       setMovies(data.results);
+
                   } catch (err) {
                       console.error('Error fetching movies:', err);
                   } 
