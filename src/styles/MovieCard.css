@@ -77,11 +77,22 @@ body.dark-mode .rating{
     width: 180px;
     margin: 5px;
   }
-
+  .movie-info{
+    padding: 14px;
+  }
+.movie-image{
+  height: 200px;
+}
+.movie-title{
+  font-size: 18px;
+}
+.movie-date{
+  font-size: 13px;
+}
   .rating {
-    left: 80%;
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
 }

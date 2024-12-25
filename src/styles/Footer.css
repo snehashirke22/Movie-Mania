@@ -7,10 +7,28 @@
 }
 
 .footer-text1{
-font-size: 20px;
+font-size: 18px;
 font-weight: 500;
 }
 
 .footer-text2{
-font-size: 18px;
+font-size: 16px;
 }
+
+body.dark-mode .footer-container{
+    background-color: #171717;
+    color: #f19914;
+}
+@media (max-width: 768px) {
+    .footer-container{
+        margin-left: 0;
+    }
+    .footer-text1{
+        font-size: 16px;
+    }
+    .footer-text2{
+        font-size: 14px;
+    }
+
+  }
+  

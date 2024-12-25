@@ -161,7 +161,7 @@ body.dark-mode .search-icon{
 
 @media (max-width: 480px) {
     .header {
-        padding: 8px 15px;  
+        padding: 8px 25px;  
     }
     .logo-img {
         height: 38px;  
@@ -178,7 +178,7 @@ body.dark-mode .search-icon{
         font-size: 14px;
     }
     .menu-bar-icon {
-        top: 20px; 
+        top: 15px; 
         left: 15px; 
     }
     .search-icon {
