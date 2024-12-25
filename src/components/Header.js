@@ -52,13 +52,13 @@ const Header = ({ toggleSidebar, isSidebarOpen, setQuery}) => {
                     <div onClick={toggleDarkMode}>
                         {isDarkMode ? 
                         <MdLightMode
-                            size={30}
+                            size={28}
                             color="white"
                             aria-label="Switch to Light Mode"
                             style={{ cursor: 'pointer' }} /> 
                             : 
                             <MdDarkMode
-                            size={30}
+                            size={28}
                             aria-label="Switch to Dark Mode"
                             style={{ cursor: 'pointer' }} />}
                     </div>
