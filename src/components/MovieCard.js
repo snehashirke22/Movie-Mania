@@ -19,7 +19,7 @@ const MovieCard = ({ title, date, image, rating }) => {
 
       <div className="movie-info">
         <h2 className="movie-title">{title}</h2>
-        <p className="movie-date">{date}</p>
+        <p className="movie-date">Release Date: {date}</p>
       </div>
 
     </div>

@@ -35,7 +35,7 @@
 }
 
 .movie-info {
-  padding: 16px;
+  padding: 18px;
 }
 
 .movie-title {
@@ -51,13 +51,13 @@
 }
 
 .movie-date {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 
 /* Dark Mode Style */
 body.dark-mode .movie-card{
-  background-color: #2a2a2a;
+  background-color: #100606;
 }
 body.dark-mode .movie-title,
 body.dark-mode .movie-date{
@@ -71,7 +71,9 @@ body.dark-mode .movie-card{
 body.dark-mode .rating{
   color: #171717;
 }
-
+body.dark-mode .movie-date{
+  color: #9da0a5;
+}
 @media (max-width: 480px) {
   .movie-card {
     width: 180px;

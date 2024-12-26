@@ -22,25 +22,25 @@ const App = () => {
     return (
         <DarkModeProvider>
 
-        <BrowserRouter>
-            <div className="app">
-                <Header 
-                    toggleSidebar={toggleSidebar} 
-                    isSidebarOpen={isSidebarOpen} 
-                    setQuery={setQuery} // Pass setQuery to Header
+            <BrowserRouter>
+                <div className="app">
+                    <Header
+                        toggleSidebar={toggleSidebar}
+                        isSidebarOpen={isSidebarOpen}
+                        setQuery={setQuery} // Pass setQuery to Header
                     />
-                <Sidebar isOpen={isSidebarOpen} />
-                <Routes>
-                    <Route path="/" exact element={<Home query={query} />} />
-                    <Route path="/trending" exact element={<Trending query={query} />} />
-                    <Route path="/upcoming" exact element={<Upcoming query={query} />} />
-                    <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
-                    <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
-                </Routes>
-                <Footer />
-            </div>
-        </BrowserRouter>
-                    </DarkModeProvider>
+                    <Sidebar isOpen={isSidebarOpen} />
+                    <Routes>
+                        <Route path="/" exact element={<Home query={query} />} />
+                        <Route path="/trending" exact element={<Trending query={query} />} />
+                        <Route path="/upcoming" exact element={<Upcoming query={query} />} />
+                        <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
+                        <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
+                    </Routes>
+                    <Footer />
+                </div>
+            </BrowserRouter>
+        </DarkModeProvider>
     );
 };
 

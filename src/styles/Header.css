@@ -94,19 +94,19 @@ body {
 
 /* Dark Mode Style */
 body.dark-mode header{
-    background-color: #2a2a2a;
+    background-color: #060505;
 }
 body.dark-mode .site-name,
 body.dark-mode .menu-bar-icon{
     color: #f19914;
 }
 body.dark-mode .search-bar{
-    background-color: #7d7d7d6a;
+    background-color: #211D1D;
     color: #f1f1f1;
 }
 body.dark-mode .search-bar::placeholder,
 body.dark-mode .search-icon{
-    color: #f1f1f1;
+    color: #898780;
 }
 
 @media (max-width: 912px){

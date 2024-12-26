@@ -6,9 +6,9 @@ const formatDate = (dateString) => {
   if (!dateString) {
     return 'N/A';
   }
-  const options = { day: '2-digit', month: 'short', year: 'numeric' }
+  const options = { day: '2-digit', month: '2-digit', year: 'numeric' }
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', options);
+  return date.toLocaleDateString('en-GB', options);
 
 };
 const MovieList = ({ movies }) => {

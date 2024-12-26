@@ -16,11 +16,12 @@ body {
 
 /* Dark Mode Style */
 body.dark-mode{
-  background-color: #333333;;
+  background-color: #2d2d2d;;
 }
 
 body.dark-mode .app{
-background-color: #535353;
+background-color: #2d2d2d;
+
 }
 
 @media (max-width: 1400px) {
