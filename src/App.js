@@ -10,6 +10,7 @@ import PeopleChoice from './pages/PeopleChoice';
 import Genre from './pages/Genre';
 import DarkModeProvider from './context/DarkModeContext';
 import Footer from './components/Footer';
+import MovieDetails from './components/MovieDetails';
 
 const App = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,6 +37,8 @@ const App = () => {
                         <Route path="/upcoming" exact element={<Upcoming query={query} />} />
                         <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
                         <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
+                        <Route path="/movie/:id" exact element={<MovieDetails/>} />
+
                     </Routes>
                     <Footer />
                 </div>

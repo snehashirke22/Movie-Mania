@@ -1,13 +1,21 @@
 import React from 'react';
 import '../styles/MovieCard.css';
+import { useNavigate } from 'react-router-dom';
 
-const MovieCard = ({ title, date, image, rating }) => {
+const MovieCard = ({ id, title, date, image, rating }) => {
+
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/movie/${id}`); // Redirect to the movie detail page
+  };
+
 
   //If rating not available or 0 or null or undefined then show NA instead
   const displayRating = (parseFloat(rating) === 0 || !rating) ? 'NA' : rating; 
 
   return (
-    <div className="movie-card">
+    <div className="movie-card"  onClick={handleCardClick}>
 
       <div className="movie-image-container">
         <img src={image} alt={title} className="movie-image" loading="lazy"/>

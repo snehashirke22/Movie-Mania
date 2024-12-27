@@ -1,0 +1,280 @@
+.back-arrow {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 16px; /* Adjust size as needed */
+  color: white;
+  cursor: pointer;
+  z-index: 100; /* Ensure it appears above other elements */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between arrow and text */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back-arrow-icon{
+  font-size: 50px;
+}
+.back-arrow:hover {
+  color: #f19914; /* Add hover effect */
+}
+
+
+/* Main Container */
+.movie-detail-container {
+  max-width: 1520px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 250px;
+}
+
+/* Poster Section */
+.movie-detail-backposter {
+  position: relative;
+  width: 100%;
+  height: 850px;
+}
+
+/* Poster Image */
+.movie-detail-backposter-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Section */
+.movie-detail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.655); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Flex Layout for Poster and Details */
+.movie-detail-flex {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Small Poster Section */
+.movie-detail-smallposter {
+  flex: 1;
+}
+
+.movie-detail-smallposter-image {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 30%;
+  
+}
+
+
+/* Movie Details Section */
+.movie-detail-info {
+  flex-wrap: wrap;
+  flex: 2;
+}
+
+.movie-detail-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.movie-detail-overview {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+.movie-detail-flexrow3{
+display: flex;
+flex-direction: row;
+gap: 4%;
+}
+.movie-detail-rating{
+  background-color: #f19914;
+  border: 2px solid #fff;
+  color: #171717;
+  width: 100px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+.movie-detail-rating-no{
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.watch-trailer-btn{
+  background-color: #f6f6f6;
+  color: #171717;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #f19914;
+  border-radius: 5px;
+  margin-top: 1.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  cursor: pointer;
+}
+
+.watch-trailer-btn:hover{
+  background-color: #f6f6f6e7;
+}
+
+.movie-detail-flexrow4{
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  margin-top: 5%;
+  }
+
+  .movie-detail-genres{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+   
+  }
+  .movie-detail-genres-tag{
+    background-color: #5cc5c0;
+  border: 2px solid #fff;
+  color: #171717;
+  width: 100%;
+  height: 100%;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  }
+
+  .movie-detail-flexrow5{
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    margin-top: 5%;
+    }
+
+
+    .movie-detail-row{
+      display: flex;
+    }
+
+    .movie-detail-box{
+      
+      background-color: rgba(0, 0, 0, 0.405);
+  color: #fff;
+  width: 240px;
+  height: 100%;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+    }
+
+body.dark-mode .watch-trailer-btn{
+  background-color: #171717;
+  color: #fff;
+}
+
+body.dark-mode .watch-trailer-btn:hover{
+  background-color: #1717175d;
+}
+
+@media (max-width: 1500px) {
+
+}
+    @media (max-width: 768px) {
+
+      .movie-detail-flex, .movie-detail-overlay, .movie-detail-flexrow3, .movie-detail-flexrow4{
+        flex-direction: column;
+      }
+    .movie-detail-container{
+      margin-left: 0;
+    }
+    .movie-detail-backposter{
+      height: 1520px;
+    }
+    .movie-detail-flex{
+      width: 100%;
+      gap: 0;
+    }
+   
+    .movie-detail-smallposter-image{
+      margin-top: 0 50% ;
+      align-items: center;
+      justify-content: center;
+    }
+    .movie-detail-title{
+      font-size: 2rem;
+    }
+    .movie-detail-overview{
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+
+    }
+    .movie-detail-rating{
+      height: 40px;
+      flex-direction: row;
+    }
+    .movie-detail-rating-no{
+      font-size: 22px;
+      margin-right: 5%;
+    }
+    .watch-trailer-btn{
+      height: 45px ;
+    }
+    .movie-detail-flexrow4{
+      flex-wrap: wrap;
+    }
+    .movie-detail-genres{
+      gap: 1%;
+      flex-wrap: wrap;
+    }
+    .movie-detail-genres-tag{
+      margin-top: 2%;
+      width: 30%;
+    }
+    .movie-detail-flexrow5{
+      flex-direction: row;
+      gap: 1%;
+    }
+    .movie-detail-row{
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    .movie-detail-box{
+      width: 180px;
+      font-size: 0.9rem;
+    }
+    }
+
+@media (max-width: 480px) {
+
+  .back-arrow{
+    display: none;
+  }
+
+}

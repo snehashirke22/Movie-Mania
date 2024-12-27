@@ -20,6 +20,7 @@ const MovieList = ({ movies }) => {
         movies.map(movie => (
           <MovieCard
             key={movie.id}
+            id={movie.id}
             image={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image+Available'} //Placeholder image if image not available
             rating={(movie.vote_average || 0).toFixed(1)}
             title={movie.title || movie.name}
