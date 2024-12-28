@@ -7,7 +7,7 @@ const MovieCard = ({ id, title, date, image, rating }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/movie/${id}`); // Redirect to the movie detail page
+    navigate(`/moviedetails/${id}`); // Redirect to the movie detail page
   };
 
 

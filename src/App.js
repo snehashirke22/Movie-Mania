@@ -37,7 +37,7 @@ const App = () => {
                         <Route path="/upcoming" exact element={<Upcoming query={query} />} />
                         <Route path="/peoplechoice" exact element={<PeopleChoice query={query} />} />
                         <Route path="/genre/:genreName/:genreId" exact element={<Genre query={query} />} />
-                        <Route path="/movie/:id" exact element={<MovieDetails/>} />
+                        <Route path="/moviedetails/:id" exact element={<MovieDetails/>} />
 
                     </Routes>
                     <Footer />
