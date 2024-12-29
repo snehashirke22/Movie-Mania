@@ -30,7 +30,7 @@ const App = () => {
                         isSidebarOpen={isSidebarOpen}
                         setQuery={setQuery} // Pass setQuery to Header
                     />
-                    <Sidebar isOpen={isSidebarOpen} />
+                    <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar}/>
                     <Routes>
                         <Route path="/" exact element={<Home query={query} />} />
                         <Route path="/trending" exact element={<Trending query={query} />} />
